@@ -1,4 +1,24 @@
-<?php 
+<?php
+/**
+ * Plugin Name: WP Project Manager
+ * Plugin URI: https://iipnsolutions.com
+ * Description: A custom plugin to manage projects with categories, filters, and extra fields.
+ * Version: 1.0
+ * Author: Nishant Gupta
+ * Author URI: https://iipnsolutions.com
+ * License: GPL v2 or later
+ * Text Domain: wp-project-manager
+ */
+
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly
+}
+
+// Include required files
+require_once plugin_dir_path(__FILE__) . 'includes/post-type.php';
+require_once plugin_dir_path(__FILE__) . 'includes/taxonomy.php';
+require_once plugin_dir_path(__FILE__) . 'includes/meta-box.php';
+require_once plugin_dir_path(__FILE__) . 'includes/shortcode.php';
 function wppm_filter_projects() {
     $args = array(
         'post_type'      => 'project',
