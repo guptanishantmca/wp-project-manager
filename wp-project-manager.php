@@ -60,8 +60,8 @@ add_action('wp_ajax_wppm_filter_projects', 'wppm_filter_projects');
 add_action('wp_ajax_nopriv_wppm_filter_projects', 'wppm_filter_projects');
 
 function wppm_enqueue_assets() {
-    wp_enqueue_style('wppm-style', plugin_dir_url(__FILE__) . 'assets/style.css');
-    wp_enqueue_script('wppm-script', plugin_dir_url(__FILE__) . 'assets/script.js', array('jquery'), null, true);
+    wp_enqueue_style('wppm-style', plugin_dir_url(__FILE__) . 'includes/assets/style.css');
+    wp_enqueue_script('wppm-script', plugin_dir_url(__FILE__) . 'includes/assets/script.js', array('jquery'), null, true);
 }
 add_action('wp_enqueue_scripts', 'wppm_enqueue_assets');
 
