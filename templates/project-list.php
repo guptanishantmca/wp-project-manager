@@ -1,14 +1,28 @@
 <?php
-$args = array('post_type' => 'project', 'posts_per_page' => -1);
+$args = array('post_type' => 'project', 'posts_per_page' => 6);
 $query = new WP_Query($args);
+
 if ($query->have_posts()) {
+    echo '<div class="project-grid">';
     while ($query->have_posts()) {
-        $query->the_post(); ?>
+        $query->the_post();
+        $image_url = get_the_post_thumbnail_url(get_the_ID(), 'medium'); // Get Featured Image
+        ?>
         <div class="project-item">
-            <h3><?php the_title(); ?></h3>
-            <div><?php the_excerpt(); ?></div>
+            <div class="project-image">
+                <a href="<?php the_permalink(); ?>">
+                    <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
+                </a>
+            </div>
+            <div class="project-info">
+                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                <p><?php echo wp_trim_words(get_the_excerpt(), 15); ?></p>
+                <a href="<?php the_permalink(); ?>" class="read-more">Read More →</a>
+            </div>
         </div>
-    <?php }
+        <?php
+    }
+    echo '</div>';
 } else {
     echo '<p>No projects found.</p>';
 }

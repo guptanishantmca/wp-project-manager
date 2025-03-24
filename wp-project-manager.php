@@ -64,3 +64,11 @@ function wppm_enqueue_assets() {
     wp_enqueue_script('wppm-script', plugin_dir_url(__FILE__) . 'assets/script.js', array('jquery'), null, true);
 }
 add_action('wp_enqueue_scripts', 'wppm_enqueue_assets');
+
+function wppm_single_project_template($template) {
+    if (is_singular('project')) {
+        return plugin_dir_path(__FILE__) . 'templates/single-project.php';
+    }
+    return $template;
+}
+add_filter('single_template', 'wppm_single_project_template');
