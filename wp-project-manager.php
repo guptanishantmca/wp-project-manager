@@ -31,6 +31,7 @@ function wppm_filter_projects() {
                 'taxonomy' => 'project_category',
                 'field'    => 'slug',
                 'terms'    => $_POST['category'],
+                'operator' => 'IN',
             ),
         );
     }
@@ -71,6 +72,14 @@ add_action('wp_ajax_wppm_filter_projects', 'wppm_filter_projects');
 add_action('wp_ajax_nopriv_wppm_filter_projects', 'wppm_filter_projects');
 
 function wppm_enqueue_assets() {
+
+    // Enqueue Select2 CSS
+    wp_enqueue_style('select2-css', 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css');
+
+    // Enqueue Select2 JS (after jQuery)
+    wp_enqueue_script('select2-js', 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js', array('jquery'), null, true);
+
+
     wp_enqueue_style('wppm-style', plugin_dir_url(__FILE__) . 'includes/assets/style.css');
     wp_enqueue_script('wppm-script', plugin_dir_url(__FILE__) . 'includes/assets/script.js', array('jquery'), null, true);
 }

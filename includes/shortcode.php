@@ -2,15 +2,16 @@
 function wppm_project_shortcode() {
     ob_start(); ?>
     <form id="project-filter">
-        <select id="project-category" name="project_category">
-            <option value="">All Categories</option>
-            <?php
-            $terms = get_terms(array('taxonomy' => 'project_category', 'hide_empty' => false));
-            foreach ($terms as $term) {
-                echo '<option value="' . $term->slug . '">' . $term->name . '</option>';
-            }
-            ?>
-        </select>
+    <select id="project-category" name="project_category[]" multiple style="width: 50%">
+    <option value="">Select Project Categories</option>
+    <?php
+    $terms = get_terms(array('taxonomy' => 'project_category', 'hide_empty' => false));
+    foreach ($terms as $term) {
+        echo '<option value="' . esc_attr($term->slug) . '">' . esc_html($term->name) . '</option>';
+    }
+    ?>
+</select>
+
         <input type="text" id="project-search" name="search" placeholder="Search projects">
         <button type="submit">Filter</button>
     </form>

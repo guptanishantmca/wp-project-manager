@@ -54,3 +54,14 @@
 .more:hover {
     text-decoration: underline;
 }
+
+
+.select2-container {
+    width: 100% !important;
+}
+
+.select2-selection {
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+}
