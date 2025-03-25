@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
     $('#project-category').select2({
         placeholder: "Select Project Categories",
         allowClear: true,
-        width: '100%'
+       width: 'resolve'
     });
 
     $('#filter-btn').on('click', function(e) {
