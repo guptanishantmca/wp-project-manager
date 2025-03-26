@@ -82,8 +82,22 @@ function wppm_enqueue_assets() {
 
     wp_enqueue_style('wppm-style', plugin_dir_url(__FILE__) . 'includes/assets/style.css');
     wp_enqueue_script('wppm-script', plugin_dir_url(__FILE__) . 'includes/assets/script.js', array('jquery'), null, true);
+    
 }
 add_action('wp_enqueue_scripts', 'wppm_enqueue_assets');
+
+function wppm_enqueue_slick_slider() {
+    // Slick Slider CSS & JS
+    wp_enqueue_style('slick-css', 'https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css');
+    wp_enqueue_style('slick-theme-css', 'https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css');
+    
+    wp_enqueue_script('slick-js', 'https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js', array('jquery'), null, true);
+
+    // Custom JS
+    wp_enqueue_script('wppm-slider', plugin_dir_url(__FILE__) . 'includes/assets/slider.js', array('jquery', 'slick-js'), null, true);
+}
+add_action('wp_enqueue_scripts', 'wppm_enqueue_slick_slider');
+
 
 function wppm_single_project_template($template) {
     if (is_singular('project')) {

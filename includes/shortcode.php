@@ -2,7 +2,7 @@
 function wppm_project_shortcode() {
     ob_start(); ?>
     <form id="project-filter">
-    <select id="project-category" name="project_category[]" multiple style="width: 50%">
+    <select id="project-category" name="project_category[]" multiple style="width: 45%">
     <option value="">Select Project Categories</option>
     <?php
     $terms = get_terms(array('taxonomy' => 'project_category', 'hide_empty' => false));
