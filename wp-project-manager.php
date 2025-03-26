@@ -36,6 +36,15 @@ function wppm_filter_projects() {
         );
     }
 
+    if (!empty($_POST['keywords'])) {
+        $args['tax_query'][] = array(
+            'taxonomy' => 'project_keywords',
+            'field'    => 'slug',
+            'terms'    => $_POST['keywords'],
+            'operator' => 'IN',
+        );
+    }
+
     if (!empty($_POST['search'])) {
         $args['s'] = sanitize_text_field($_POST['search']);
     }

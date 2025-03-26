@@ -32,15 +32,21 @@ if (!empty($gallery_images)) : ?>
     <?php endif; ?>
 
     <!-- Project Details -->
+    <div class="row">
+    <div class="col-4">
     <div class="project-info">
         <p><strong>Project Location:</strong> <?php echo get_post_meta(get_the_ID(), '_project_location', true); ?></p>
         <p><strong>Keywords:</strong> <?php echo get_post_meta(get_the_ID(), '_project_keywords', true); ?></p>
-    </div>
+        </div>
+        </div>
 
     <!-- Project Description -->
+    <div class="col-8">
     <div class="project-description">
         <?php the_content(); ?>
-    </div>
+        </div>
+        </div>
+        </div>
 
     <!-- Back to Project Experience -->
     <a href="<?php echo get_post_type_archive_link('project'); ?>" class="back-button">← Back to Project Experience</a>

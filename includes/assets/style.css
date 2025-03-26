@@ -107,10 +107,10 @@
 
 /* Project Info */
 .project-info {
-    background: #f8f8f8;
-    padding: 15px;
+    /* background: #f8f8f8; */
+    /* padding: 15px; */
     margin: 20px 0;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 .project-info p {
     font-size: 16px;

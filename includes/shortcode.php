@@ -12,8 +12,17 @@ function wppm_project_shortcode() {
     ?>
 </select>
 
-        <input type="text" id="project-search" name="search" placeholder="Search projects">
-        <button type="submit">Filter</button>
+     <!-- Multi-Select Keywords -->
+    <select id="project-keywords" name="keywords[]" multiple style="width: 45%">
+        <option value="">Select Keywords</option>
+        <?php
+        $keywords = get_terms(array('taxonomy' => 'project_keywords', 'hide_empty' => false));
+        foreach ($keywords as $keyword) {
+            echo '<option value="' . esc_attr($keyword->slug) . '">' . esc_html($keyword->name) . '</option>';
+        }
+        ?>
+    </select> 
+    <button type="submit" id="filter-btn">Filter</button>
     </form>
     
     <div id="project-results">
