@@ -91,6 +91,11 @@ function wppm_enqueue_assets() {
 
     wp_enqueue_style('wppm-style', plugin_dir_url(__FILE__) . 'includes/assets/style.css');
     wp_enqueue_script('wppm-script', plugin_dir_url(__FILE__) . 'includes/assets/script.js', array('jquery'), null, true);
+
+    // Pass AJAX URL to script.js
+    wp_localize_script('wppm-script', 'wppm_ajax', array(
+        'ajaxurl' => admin_url('admin-ajax.php')
+    ));
     
 }
 add_action('wp_enqueue_scripts', 'wppm_enqueue_assets');

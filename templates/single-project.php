@@ -35,9 +35,26 @@ if (!empty($gallery_images)) : ?>
     <div class="row">
     <div class="col-4">
     <div class="project-info">
-        <p><strong>Project Location:</strong> <?php echo get_post_meta(get_the_ID(), '_project_location', true); ?></p>
-        <p><strong>Keywords:</strong> <?php echo get_post_meta(get_the_ID(), '_project_keywords', true); ?></p>
-        </div>
+    <p><strong>Project Location:</strong> <br>
+    <?php 
+        $project_location = get_field('project_location'); // Fetch ACF field
+        echo (!empty($project_location)) ? esc_html($project_location) : 'Not Available'; 
+        ?>
+    </p>
+
+    <p><strong>Keywords:</strong> <br>
+        <?php 
+        $keywords = get_the_terms(get_the_ID(), 'project_keywords');
+        if (!empty($keywords) && !is_wp_error($keywords)) {
+            $keyword_list = wp_list_pluck($keywords, 'name'); 
+            echo implode(', ', $keyword_list); 
+        } else {
+            echo 'Not Available';
+        }
+        ?>
+    </p>
+</div>
+
         </div>
 
     <!-- Project Description -->

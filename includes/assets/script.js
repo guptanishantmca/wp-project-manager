@@ -11,7 +11,8 @@ jQuery(document).ready(function($) {
         var keywords = $('#project-keywords').val();
 
         $.ajax({
-            url: ajaxurl,
+            url: wppm_ajax.ajaxurl, // Use the localized AJAX URL
+
             type: 'POST',
             data: {
                 action: 'wppm_filter_projects',
