@@ -16,7 +16,7 @@
 }
 
 .project-item:hover {
-    background: #ffe;
+    background: #fff;
     /* transform: translateY(-5px); */
 }
 
@@ -36,6 +36,9 @@
     margin: 10px 0;
 }
 
+.project-info h3 a{
+    color: #212529;
+}
 .project-info p {
     font-size: 14px;
     color: #666;
@@ -49,6 +52,7 @@
     font-weight: bold; */
     font-size: 12px;
     padding: 0px 5px; 
+    color: #212529;
 }
 
 .more:hover {
@@ -102,7 +106,7 @@
     height: auto;
     max-height: 400px;
     object-fit: cover;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 /* Project Info */

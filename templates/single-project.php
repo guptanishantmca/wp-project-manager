@@ -3,11 +3,11 @@
 <div class="project-detail-container">
 
     <!-- Breadcrumb -->
-    <nav class="breadcrumb">
+    <!-- <nav class="breadcrumb">
         <a href="<?php echo home_url(); ?>">Home</a> &gt; 
         <a href="<?php echo get_post_type_archive_link('project'); ?>">Project Experience</a> &gt; 
         <span><?php the_title(); ?></span>
-    </nav>
+    </nav> -->
 
     <!-- Project Title -->
     <h1 class="project-title"><?php the_title(); ?></h1>
@@ -66,7 +66,7 @@ if (!empty($gallery_images)) : ?>
         </div>
 
     <!-- Back to Project Experience -->
-    <a href="<?php echo get_post_type_archive_link('project'); ?>" class="back-button">← Back to Project Experience</a>
+    <a href="<?php echo site_url('/project-experience/'); ?>" class="back-button">← Back to Project Experience</a>
 
 </div>
 
