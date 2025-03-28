@@ -1,6 +1,11 @@
 jQuery(document).ready(function($) {
-    $('#project-category, #project-keywords').select2({
+    $('#project-category').select2({
         placeholder: "Select Project Categories",
+        allowClear: true,
+       width: 'resolve'
+    });
+    $('#project-keywords').select2({
+        placeholder: "Select Keywords",
         allowClear: true,
        width: 'resolve'
     });
