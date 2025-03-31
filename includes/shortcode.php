@@ -32,7 +32,7 @@ function wppm_project_shortcode()
             <div class="col-12 col-md-2 p-1">
                 <button type="submit" id="filter-btn">Filter</button>
             </div> -->
-        </div> 
+        </div>  
     </form>
 
     <div id="project-results">
