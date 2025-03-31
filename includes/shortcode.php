@@ -26,7 +26,7 @@ function wppm_project_shortcode()
                         echo '<option value="' . esc_attr($keyword->slug) . '">' . esc_html($keyword->name) . '</option>';
                     }
                     ?>
-                </select>
+                </select>  
             </div>
             <!-- <div class="   d-sm-block d-md-none" style="height: 5px;">&nbsp;</div>
             <div class="col-12 col-md-2 p-1">
