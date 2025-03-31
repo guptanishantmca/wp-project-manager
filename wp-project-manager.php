@@ -120,3 +120,7 @@ function wppm_single_project_template($template) {
     return $template;
 }
 add_filter('single_template', 'wppm_single_project_template');
+
+
+ 
+ 

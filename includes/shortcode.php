@@ -15,7 +15,7 @@ function wppm_project_shortcode()
                     ?>
                 </select>
             </div>
-
+            <div class="    d-sm-block d-md-none" style="height: 5px;">&nbsp;</div>
             <!-- Multi-Select Keywords -->
             <div class="col-12 col-md-5 p-1">
                 <select id="project-keywords" name="keywords[]" multiple style="width: 45%">
@@ -28,10 +28,11 @@ function wppm_project_shortcode()
                     ?>
                 </select>
             </div>
+            <!-- <div class="   d-sm-block d-md-none" style="height: 5px;">&nbsp;</div>
             <div class="col-12 col-md-2 p-1">
                 <button type="submit" id="filter-btn">Filter</button>
-            </div>
-        </div>
+            </div> -->
+        </div> 
     </form>
 
     <div id="project-results">
