@@ -86,13 +86,14 @@ function wppm_enqueue_assets() {
     wp_enqueue_style('select2-css', 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css');
 
     // Enqueue Select2 JS (after jQuery)
-    wp_enqueue_script('select2-js', 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js', array('jquery'), null, true);
+    wp_enqueue_script('select2-js', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js', array('jquery'), null, true);
 
+    wp_enqueue_style('font-awesome-css', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
     wp_enqueue_style('wppm-style', plugin_dir_url(__FILE__) . 'includes/assets/style.css');
     wp_enqueue_script('wppm-script', plugin_dir_url(__FILE__) . 'includes/assets/script.js', array('jquery'), null, true);
 
-    // Pass AJAX URL to script.js
+    // Pass AJAX URL to script.js 
     wp_localize_script('wppm-script', 'wppm_ajax', array(
         'ajaxurl' => admin_url('admin-ajax.php')
     ));

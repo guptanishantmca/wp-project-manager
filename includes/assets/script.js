@@ -1,20 +1,32 @@
 jQuery(document).ready(function($) {
-    $('#project-category').select2({
-        placeholder: "Select Project Categories",
-        allowClear: true,
-       width: 'resolve',
-       allowHtml: true,
-	 
-			tags: true
-    });
-    $('#project-keywords').select2({
-        placeholder: "Select Keywords",
+    // $('#project-category').select2({
+    //     placeholder: "Select Project Categories",
+    //     allowClear: true,
+    //    width: 'resolve'
+    // });
+    // $('#project-keywords').select2({
+    //     placeholder: "Select Keywords",
+    //     allowClear: true,
+    //    width: 'resolve'
+    // });
+
+    $("#project-category").select2({
+        closeOnSelect : false,
+        placeholder : "Select Project Categories",
         allowHtml: true,
-			allowClear: true,
-			tags: true,
-       width: 'resolve'
+        allowClear: true,
+        width: 'resolve',
+        tags: true //  
     });
 
+    $("#project-keywords").select2({
+        closeOnSelect : false,
+        placeholder : "Select Keywords",
+        allowHtml: true,
+        allowClear: true,
+        width: 'resolve',
+        tags: true //   
+    });
     // $('#filter-btn').on('click', function(e) {
     //     e.preventDefault();
     //     var categories = $('#project-category').val();

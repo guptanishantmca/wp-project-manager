@@ -5,7 +5,7 @@ function wppm_project_shortcode()
     <form id="project-filter">
         <div class="row">
             <div class="col-12 col-md-5 p-1">
-                <select id="project-category" name="project_category[]" multiple style="width: 45%">
+                <select id="project-category" name="project_category[]" multiple style="width: 45%" placeholder="Select Project Categories">
                     <option value="">Select Project Categories</option>
                     <?php
                     $terms = get_terms(array('taxonomy' => 'project_category', 'hide_empty' => false));
@@ -18,12 +18,12 @@ function wppm_project_shortcode()
             <div class="    d-sm-block d-md-none" style="height: 5px;">&nbsp;</div>
             <!-- Multi-Select Keywords -->
             <div class="col-12 col-md-5 p-1">
-                <select id="project-keywords" name="keywords[]" multiple style="width: 45%">
+                <select id="project-keywords" name="keywords[]" multiple style="width: 45%"  placeholder="Select Keywords">
                     <option value="">Select Keywords</option>
                     <?php
                     $keywords = get_terms(array('taxonomy' => 'project_keywords', 'hide_empty' => false));
                     foreach ($keywords as $keyword) {
-                        echo '<option value="' . esc_attr($keyword->slug) . '">' . esc_html($keyword->name) . '</option>';
+                        echo '<option value="' . esc_attr($keyword->slug) . '"  data-badge="">' . esc_html($keyword->name) . '</option>';
                     }
                     ?>
                 </select>  
