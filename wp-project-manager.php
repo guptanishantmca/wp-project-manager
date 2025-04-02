@@ -114,7 +114,7 @@ add_action('wp_enqueue_scripts', 'wppm_enqueue_slick_slider');
 
 
 function wppm_single_project_template($template) {
-    if (is_singular('project')) {
+    if (is_singular('project-experience')) {
         return plugin_dir_path(__FILE__) . 'templates/single-project.php';
     }
     return $template;
