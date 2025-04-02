@@ -23,6 +23,6 @@ function wppm_register_project_post_type() {
         'rewrite'             => array('slug' => 'project-experience'),
     );
 
-    register_post_type('project', $args);
+    register_post_type('project-experience', $args);
 }
 add_action('init', 'wppm_register_project_post_type');
