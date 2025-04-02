@@ -2,11 +2,16 @@ jQuery(document).ready(function($) {
     $('#project-category').select2({
         placeholder: "Select Project Categories",
         allowClear: true,
-       width: 'resolve'
+       width: 'resolve',
+       allowHtml: true,
+	 
+			tags: true
     });
     $('#project-keywords').select2({
         placeholder: "Select Keywords",
-        allowClear: true,
+        allowHtml: true,
+			allowClear: true,
+			tags: true,
        width: 'resolve'
     });
 

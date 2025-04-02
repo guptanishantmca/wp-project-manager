@@ -10,7 +10,7 @@ function wppm_project_shortcode()
                     <?php
                     $terms = get_terms(array('taxonomy' => 'project_category', 'hide_empty' => false));
                     foreach ($terms as $term) {
-                        echo '<option value="' . esc_attr($term->slug) . '">' . esc_html($term->name) . '</option>';
+                        echo '<option value="' . esc_attr($term->slug) . '" data-badge="">' . esc_html($term->name) . '</option>';
                     }
                     ?>
                 </select>
