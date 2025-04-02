@@ -134,7 +134,9 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
   
   }
-  
+  .select2-selection .select2-selection--multiple:after {
+	content: 'hhghgh';
+}
 /* Breadcrumb */
 .breadcrumb {
     /* font-size: 14px;
