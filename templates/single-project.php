@@ -1,4 +1,9 @@
 <?php get_header(); ?>
+<style>
+    .parallax-background{
+        background-image: url("/wp-content/uploads/2020/01/about4.jpg")!important;
+    }
+</style>
 
 <div class="project-detail-container">
 
@@ -66,7 +71,7 @@ if (!empty($gallery_images)) : ?>
         </div>
 
     <!-- Back to Project Experience -->
-    <a href="<?php echo site_url('/project-experience/'); ?>" class="back-button">← Back to Project Experience</a>
+    <a href="<?php echo site_url('/project-experiences/'); ?>" class="back-button">← Back to Project Experience</a>
 
 </div>
 

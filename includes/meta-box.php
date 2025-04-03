@@ -4,7 +4,7 @@ function wppm_add_project_gallery_meta_box() {
         'wppm_project_gallery',
         'Project Gallery',
         'wppm_project_gallery_callback',
-        'project',
+        'project-experience',
         'normal',
         'high'
     );

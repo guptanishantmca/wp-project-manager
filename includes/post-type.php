@@ -20,9 +20,9 @@ function wppm_register_project_post_type() {
         'show_in_menu'        => true,
         'supports'            => array('title', 'editor', 'thumbnail'),
         'menu_icon'           => 'dashicons-portfolio',
-        'rewrite'             => array('slug' => 'projects'),
+        'rewrite'             => array('slug' => 'project-experience'),
     );
 
-    register_post_type('project', $args);
+    register_post_type('project-experience', $args);
 }
 add_action('init', 'wppm_register_project_post_type');

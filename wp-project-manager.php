@@ -21,7 +21,7 @@ require_once plugin_dir_path(__FILE__) . 'includes/meta-box.php';
 require_once plugin_dir_path(__FILE__) . 'includes/shortcode.php';
 function wppm_filter_projects() {
     $args = array(
-        'post_type'      => 'project',
+        'post_type'      => 'project-experience',
         'posts_per_page' => -1,
     );
 
@@ -115,7 +115,7 @@ add_action('wp_enqueue_scripts', 'wppm_enqueue_slick_slider');
 
 
 function wppm_single_project_template($template) {
-    if (is_singular('project')) {
+    if (is_singular('project-experience')) {
         return plugin_dir_path(__FILE__) . 'templates/single-project.php';
     }
     return $template;
