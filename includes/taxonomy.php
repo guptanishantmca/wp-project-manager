@@ -7,7 +7,7 @@ function wppm_register_project_category_taxonomy() {
         'show_admin_column' => true,
         'rewrite'      => array('slug' => 'project-category'),
     );
-    register_taxonomy('project_category', 'project', $args);
+    register_taxonomy('project_category', 'project-experience', $args);
 }
 add_action('init', 'wppm_register_project_category_taxonomy');
 
@@ -22,6 +22,6 @@ function wppm_register_project_keywords_taxonomy() {
         'query_var'         => true,
         'rewrite'           => array('slug' => 'project-keywords'),
     );
-    register_taxonomy('project_keywords', 'project', $args);
+    register_taxonomy('project_keywords', 'project-experience', $args);
 }
 add_action('init', 'wppm_register_project_keywords_taxonomy');
