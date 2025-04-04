@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header('project-detail'); ?>
 <style>
     .parallax-background{
         background-image: url("/wp-content/uploads/2020/01/about4.jpg")!important;
@@ -38,7 +38,7 @@ if (!empty($gallery_images)) : ?>
 
     <!-- Project Details -->
     <div class="row">
-    <div class="col-4">
+    <div class="col-md-4 col-sm-12">
     <div class="project-info">
     <p><strong>Project Location:</strong> <br>
     <?php 
@@ -63,7 +63,7 @@ if (!empty($gallery_images)) : ?>
         </div>
 
     <!-- Project Description -->
-    <div class="col-8">
+    <div class="col-md-8 col-sm-12">
     <div class="project-description">
         <?php the_content(); ?>
         </div>

@@ -1,9 +1,9 @@
 <?php
 function wppm_register_project_post_type() {
     $labels = array(
-        'name'          => 'Projects',
-        'singular_name' => 'Project',
-        'menu_name'     => 'Projects',
+        'name'          => 'Project Experience',
+        'singular_name' => 'Project Experience',
+        'menu_name'     => 'Project Experience',
         'all_items'     => 'All Projects',
         'add_new'       => 'Add New',
         'add_new_item'  => 'Add New Project',
@@ -12,7 +12,7 @@ function wppm_register_project_post_type() {
     );
 
     $args = array(
-        'label'               => 'Projects',
+        'label'               => 'Project Experience',
         'labels'              => $labels,
         'public'              => true,
         'has_archive'         => true,
