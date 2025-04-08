@@ -90,7 +90,9 @@ function wppm_enqueue_assets() {
 
     wp_enqueue_style('font-awesome-css', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
-    wp_enqueue_style('wppm-style', plugin_dir_url(__FILE__) . 'includes/assets/style.css');
+    //wp_enqueue_style('wppm-style', plugin_dir_url(__FILE__) . 'includes/assets/style.css');
+    wp_enqueue_style('wppm-style', plugin_dir_url(__FILE__) . 'includes/assets/style.css', [], filemtime(plugin_dir_path(__FILE__) . 'includes/assets/style.css'));
+
     wp_enqueue_script('wppm-script', plugin_dir_url(__FILE__) . 'includes/assets/script.js', array('jquery'), null, true);
 
     // Pass AJAX URL to script.js 
