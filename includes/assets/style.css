@@ -47,6 +47,9 @@
     color: #666;
 }
 
+p strong {
+    color: rgba(31, 31, 31, 0.5)!important;
+  }
 .more {
     /* display: inline-block;
     margin-top: 10px;
