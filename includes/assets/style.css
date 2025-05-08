@@ -44,9 +44,11 @@
 }
 .project-info p {
     font-size: 14px;
-    color: #666;
+    color: #111111;
 }
-
+.project-description p{
+    color: #111111;
+}
 p strong {
     color: rgba(83, 83, 83, 0.5)!important;
   }
@@ -237,14 +239,14 @@ p strong {
 /* Back Button */
 .back-button {
     display: inline-block;
-    color: rgba(83, 83, 83, 0.5)!important;
-    
+    color: rgba(31, 31, 31, 0.5) !important;
+
      
     text-decoration: none;
     
 }
 .back-button:hover {
-    background: #005f88;
+    color: #005f88;
 }
 
 .slick-slider .slick-prev{
