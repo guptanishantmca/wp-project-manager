@@ -40,14 +40,14 @@ if (!empty($gallery_images)) : ?>
     <div class="row">
     <div class="col-md-4 col-sm-12">
     <div class="project-info">
-    <p><strong>Project Location:</strong> <br>
+    <p><strong>PROJECT LOCATION:</strong> <br>
     <?php 
         $project_location = get_field('project_location'); // Fetch ACF field
         echo (!empty($project_location)) ? esc_html($project_location) : 'Not Available'; 
         ?>
     </p>
 
-    <p><strong>Keywords:</strong> <br>
+    <p><strong>KEY WORDS:</strong> <br>
         <?php 
         $keywords = get_the_terms(get_the_ID(), 'project_keywords');
         if (!empty($keywords) && !is_wp_error($keywords)) {
