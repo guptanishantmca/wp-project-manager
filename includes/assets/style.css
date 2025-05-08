@@ -237,12 +237,11 @@ p strong {
 /* Back Button */
 .back-button {
     display: inline-block;
-    margin-top: 20px;
-    padding: 10px 15px;
-    background: #0073aa;
-    color: white;
+    color: rgba(83, 83, 83, 0.5)!important;
+    
+     
     text-decoration: none;
-    border-radius: 5px;
+    
 }
 .back-button:hover {
     background: #005f88;

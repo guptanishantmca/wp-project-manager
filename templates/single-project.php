@@ -71,7 +71,7 @@ if (!empty($gallery_images)) : ?>
         </div>
 
     <!-- Back to Project Experience -->
-    <a href="<?php echo site_url('/project-experiences/'); ?>" class="back-button">← Back to Project Experience</a>
+    <a href="<?php echo site_url('/project-experiences/'); ?>" class="back-button">< Back to Project Experience</a>
 
 </div>
 
