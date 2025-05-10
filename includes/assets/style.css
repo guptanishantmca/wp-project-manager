@@ -5,8 +5,9 @@
     /* justify-content: center; */
     
 }
-
-
+.select2-container--default .select2-selection--multiple:before {color:#fff;}
+.select2-container .select2-search--inline .select2-search__field {color:#fff;}
+.select2-container--default .select2-selection {background:#888;}
 .project-item {
     max-width: 250px;  /* Ensures uniform tile size */
     background: #fff;
@@ -40,6 +41,7 @@
 }
 
 .project-info h3 a{
+    line-height: 22px;
     color: #212529;
 }
 .project-info p {
@@ -50,7 +52,7 @@
     color: #111111;
 }
 p strong {
-    color: rgba(83, 83, 83, 0.6)!important;
+    color: #000 !important;
   }
 .more {
     /* display: inline-block;

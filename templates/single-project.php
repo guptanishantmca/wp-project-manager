@@ -40,7 +40,7 @@ if (!empty($gallery_images)) : ?>
     <div class="row">
     <div class="col-md-4 col-sm-12">
     <div class="project-info">
-    <p><strong>PROJECT LOCATION:</strong> <br>
+    <p style="padding-bottom:15px;"><strong>PROJECT LOCATION:</strong> <br>
     <?php 
         $project_location = get_field('project_location'); // Fetch ACF field
         echo (!empty($project_location)) ? esc_html($project_location) : 'Not Available'; 
