@@ -6,7 +6,7 @@ function wppm_project_shortcode()
         <div class="row">
             <div class="col-12 col-md-5 p-1">
                 <select id="project-category" name="project_category[]" multiple style="width: 45%" placeholder="Select Project Categories">
-                    <option value="">Select Project Categories</option>
+                    <option value="">Select Market</option>
                     <?php
                     $terms = get_terms(array('taxonomy' => 'project_category', 'hide_empty' => false));
                     foreach ($terms as $term) {
@@ -19,7 +19,7 @@ function wppm_project_shortcode()
             <!-- Multi-Select Keywords -->
             <div class="col-12 col-md-5 p-1">
                 <select id="project-keywords" name="keywords[]" multiple style="width: 45%"  placeholder="Select Keywords">
-                    <option value="">Select Keywords</option>
+                    <option value="">Select Service</option>
                     <?php
                     $keywords = get_terms(array('taxonomy' => 'project_keywords', 'hide_empty' => false));
                     foreach ($keywords as $keyword) {
