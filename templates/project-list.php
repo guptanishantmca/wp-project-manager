@@ -15,10 +15,7 @@ if ($query->have_posts()) {
                 </a>
             </div>
             <div class="project-info">
-                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                <!-- <p><?php echo wp_trim_words(get_the_excerpt(), 15); ?></p>
-                <a href="<?php the_permalink(); ?>" class=" more">Read More →</a> -->
-                <a href="<?php the_permalink(); ?>" class=" more">Read More →</a>
+                <h3 style="display:inline;"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>                <a href="<?php the_permalink(); ?>" class=" more">Read&nbsp;More&nbsp;→</a></p>
             </div>
         </div>
         <?php
@@ -29,3 +26,6 @@ if ($query->have_posts()) {
 }
 wp_reset_postdata();
 ?>
+
+                <!-- <p><?php echo wp_trim_words(get_the_excerpt(), 15); ?>
+		<a href="<?php the_permalink(); ?>" class=" more">Read More →</a> -->

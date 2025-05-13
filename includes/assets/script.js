@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
 
     $("#project-category").select2({
         closeOnSelect : false,
-        placeholder : "Select Project Categories",
+        placeholder : "Select Market(s)",
         allowHtml: true,
         allowClear: true,
         width: 'resolve',
@@ -21,7 +21,7 @@ jQuery(document).ready(function($) {
 
     $("#project-keywords").select2({
         closeOnSelect : false,
-        placeholder : "Select Keywords",
+        placeholder : "Select Key Word(s)",
         allowHtml: true,
         allowClear: true,
         width: 'resolve',
