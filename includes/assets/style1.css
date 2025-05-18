@@ -5,9 +5,9 @@
     /* justify-content: center; */
     
 }
-.select2-container--default .select2-selection--multiple:before::placeholder {color: #888; font-size:32px; font-weight:600;}
-/*.select2-container .select2-search--inline .select2-search__field {color:#fff;}*/
-/*.select2-container--default .select2-selection {background:#b4b6b8;}*/
+.select2-container--default .select2-selection--multiple:before::placeholder {color:#fff;}
+.select2-container .select2-search--inline .select2-search__field {color:#fff;}
+.select2-container--default .select2-selection {background:#b4b6b8;}
 .project-item {
     max-width: 250px;  /* Ensures uniform tile size */
     background: #fff;

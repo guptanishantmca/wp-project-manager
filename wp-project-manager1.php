@@ -64,7 +64,7 @@ function wppm_filter_projects() {
                     </a>
                 </div>
                 <div class="project-info">
-                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br /><a href="<?php the_permalink(); ?>" class=" more">Read More →</a></h3>
+                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><a href="<?php the_permalink(); ?>" class=" more">Read More →</a></h3>
                     <!-- <p><?php echo wp_trim_words(get_the_excerpt(), 15); ?></p>
                     <a href="<?php the_permalink(); ?>" class=" more">Read More →</a> -->
                 </div>
