@@ -9,7 +9,7 @@
 /*.select2-container .select2-search--inline .select2-search__field {color:#fff;}*/
 /*.select2-container--default .select2-selection {background:#b4b6b8;}*/
 .project-item {
-    max-width: 250px;  /* Ensures uniform tile size */
+    max-width: 295px;  /* Ensures uniform tile size */
     background: #fff;
     border-radius: 8px;
     overflow: hidden;
@@ -23,10 +23,10 @@
 }
 
 .project-image img {
-    width: 100%;
+    /* width: 100%;
     height: auto;
-    max-height: 180px;  /* Reduce height for better fit */
-    object-fit: cover;
+    max-height: 180px;   
+    object-fit: cover; */
 }
 
 
@@ -213,10 +213,10 @@ p strong {
 
 /* Project Image & Slider */
 .project-image img, .project-slider img {
-    width: 100%;
+    /* width: 100%;
     height: auto;
     max-height: 400px;
-    object-fit: cover;
+    object-fit: cover; */
     /* border-radius: 10px; */
 }
 
