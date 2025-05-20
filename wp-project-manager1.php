@@ -38,7 +38,7 @@ function wppm_filter_projects() {
 
     if (!empty($_POST['keywords'])) {
         $args['tax_query'][] = array(
-            'taxonomy' => 'project_market_keywords',
+            'taxonomy' => 'project_keywords',
             'field'    => 'slug',
             'terms'    => $_POST['keywords'],
             'operator' => 'IN',
@@ -64,7 +64,7 @@ function wppm_filter_projects() {
                     </a>
                 </div>
                 <div class="project-info">
-                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br /><a href="<?php the_permalink(); ?>" class=" more">Read More →</a></h3>
+                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><a href="<?php the_permalink(); ?>" class=" more">Read More →</a></h3>
                     <!-- <p><?php echo wp_trim_words(get_the_excerpt(), 15); ?></p>
                     <a href="<?php the_permalink(); ?>" class=" more">Read More →</a> -->
                 </div>
@@ -125,11 +125,5 @@ function wppm_single_project_template($template) {
 add_filter('single_template', 'wppm_single_project_template');
 
 
-function enqueue_fancybox_assets() {
-    // Fancybox CSS & JS
-    wp_enqueue_style('fancybox-css', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css');
-    wp_enqueue_script('fancybox-js', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js', array('jquery'), null, true);
-}
-add_action('wp_enqueue_scripts', 'enqueue_fancybox_assets');
  
  

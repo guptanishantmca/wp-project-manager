@@ -22,19 +22,24 @@
         <?php
 $gallery_images = get_post_meta(get_the_ID(), '_project_gallery', true);
 
-if (!empty($gallery_images)) : ?>
+  if (!empty($gallery_images)) : ?>
     <div class="project-slider">
         <?php foreach ($gallery_images as $image_url) : ?>
-            <div><img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>"></div>
+            <div>
+                <a href="<?php echo esc_url($image_url); ?>" data-fancybox="gallery">
+                    <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
+                </a>
+            </div>
         <?php endforeach; ?>
     </div>
- 
-
-    <?php elseif (has_post_thumbnail()): ?>
-        <div class="project-image">
+<?php elseif (has_post_thumbnail()) : ?>
+    <div class="project-image">
+        <a href="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" data-fancybox="gallery">
             <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" alt="<?php the_title(); ?>">
-        </div>
-    <?php endif; ?>
+        </a>
+    </div>
+<?php endif; ?>
+
 
     <!-- Project Details -->
     <div class="row">
@@ -71,7 +76,11 @@ if (!empty($gallery_images)) : ?>
         </div>
 
     <!-- Back to Project Experience -->
-    <a href="<?php echo site_url('/project-experiences/'); ?>" class="back-button">< Back to Project Experience</a>
+    <div class="row">
+    <div class="col-md-12 col-sm-12" style="text-align: center;">
+        <a href="<?php echo site_url('/project-experiences/'); ?>" class="back-button">< Back to Project Experience</a>
+        </div>
+        </div>
 
 </div>
 

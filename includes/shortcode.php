@@ -21,7 +21,7 @@ function wppm_project_shortcode()
                 <select id="project-keywords" name="keywords[]" multiple style="width: 45%"  placeholder="Select Keywords">
                     <option value="">Select Key Word(s)</option>
                     <?php
-                    $keywords = get_terms(array('taxonomy' => 'project_keywords', 'hide_empty' => false));
+                    $keywords = get_terms(array('taxonomy' => 'project_market_keywords', 'hide_empty' => false));
                     foreach ($keywords as $keyword) {
                         echo '<option value="' . esc_attr($keyword->slug) . '"  data-badge="">' . esc_html($keyword->name) . '</option>';
                     }

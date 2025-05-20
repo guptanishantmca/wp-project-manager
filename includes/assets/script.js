@@ -1,18 +1,18 @@
 jQuery(document).ready(function($) {
     // $('#project-category').select2({
-    //     placeholder: "Select Project Categories",
+    //     placeholder: "&nbsp;",
     //     allowClear: true,
     //    width: 'resolve'
     // });
     // $('#project-keywords').select2({
-    //     placeholder: "Select Keywords",
+    //     placeholder: "&nbsp;",
     //     allowClear: true,
     //    width: 'resolve'
     // });
 
     $("#project-category").select2({
         closeOnSelect : false,
-        placeholder : "Select Market(s)",
+        placeholder : "Select Market",
         allowHtml: true,
         allowClear: true,
         width: 'resolve',
@@ -21,7 +21,7 @@ jQuery(document).ready(function($) {
 
     $("#project-keywords").select2({
         closeOnSelect : false,
-        placeholder : "Select Key Word(s)",
+        placeholder : "Select Service",
         allowHtml: true,
         allowClear: true,
         width: 'resolve',
