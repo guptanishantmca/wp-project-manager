@@ -45,6 +45,7 @@ $gallery_images = get_post_meta(get_the_ID(), '_project_gallery', true);
     <div class="row">
     <div class="col-md-4 col-sm-12">
     <div class="project-info">
+    <p style="padding-bottom:15px;"><strong>CLIENT | OWNER:</strong> <br><br>
     <p style="padding-bottom:15px;"><strong>PROJECT LOCATION:</strong> <br>
     <?php 
         $project_location = get_field('project_location'); // Fetch ACF field
