@@ -1,7 +1,7 @@
 <?php
 function wppm_register_project_category_taxonomy() {
     $args = array(
-        'label'        => 'Project Categories',
+        'label'        => 'Markets',
         'public'       => true,
         'hierarchical' => true,
         'show_admin_column' => true,
@@ -28,7 +28,7 @@ add_action('init', 'wppm_register_project_keywords_taxonomy');
 
 function wppm_register_project_market_keywords_taxonomy() {
     $args = array(
-        'label'             => 'Project Market Keywords',
+        'label'             => 'Services',
         'public'            => true,
         'hierarchical'      => false, // False makes it like "Tags"
         'show_admin_column' => true,
