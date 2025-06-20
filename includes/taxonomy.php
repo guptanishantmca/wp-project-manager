@@ -27,8 +27,21 @@ function wppm_register_project_keywords_taxonomy() {
 add_action('init', 'wppm_register_project_keywords_taxonomy');
 
 function wppm_register_project_market_keywords_taxonomy() {
+    $labels = array(
+        'name'              => 'Services',
+        'singular_name'     => 'Service',
+        'search_items'      => 'Search Services',
+        'all_items'         => 'All Services',
+        'parent_item'       => 'Parent Service',
+        'parent_item_colon' => 'Parent Service:',
+        'edit_item'         => 'Edit Service',
+        'update_item'       => 'Update Service',
+        'add_new_item'      => 'Add New Service',
+        'new_item_name'     => 'New Service Name',
+        'menu_name'         => 'Services'
+    );
     $args = array(
-        'label'             => 'Services',
+        'labels'            => $labels,
         'public'            => true,
         'hierarchical'      => true, // False makes it like "Tags"
         'show_admin_column' => true,
