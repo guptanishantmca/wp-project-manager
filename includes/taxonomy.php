@@ -30,7 +30,7 @@ function wppm_register_project_market_keywords_taxonomy() {
     $args = array(
         'label'             => 'Services',
         'public'            => true,
-        'hierarchical'      => false, // False makes it like "Tags"
+        'hierarchical'      => true, // False makes it like "Tags"
         'show_admin_column' => true,
         'show_ui'           => true,
         'query_var'         => true,
