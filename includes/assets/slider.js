@@ -1,10 +1,27 @@
 jQuery(document).ready(function($) {
-    $('.project-slider').slick();
-});
+    $('.project-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        infinite: true,
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
 
-
-jQuery(document).ready(function($) {
-    // Optional Fancybox init if you want to customize
+    // Fancybox init (optional, already correct)
     Fancybox.bind('[data-fancybox="gallery"]', {
         Toolbar: true,
         Thumbs: {
